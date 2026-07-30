@@ -14,6 +14,20 @@
 <p class="eyebrow">UpLevel Attendee</p>
 <h1>Demo Founder Four</h1>
 <ul class="tag-list"><li class="tag tag--primary">Founder</li><li class="tag">Active Multi-Time Founder</li><li class="tag tag--industry">Enterprise SaaS</li></ul>
+<div class="page-layout">
+<aside class="schedule-area">
+<section class="section schedule-panel">
+  <h2><button type="button" class="schedule-toggle" aria-expanded="false" aria-controls="schedule-content">
+    Your schedule
+    <span class="toggle-icon" aria-hidden="true">▸</span>
+  </button></h2>
+  <div class="schedule-content" id="schedule-content">
+  <p>You're seated at <strong>Table 3</strong></p>
+  <ul class="plain-list"><li>Storytelling for Founders</li></ul>
+  </div>
+</section>
+</aside>
+<div class="main-area">
 <section class="section">
   <h2>Asks &amp; Offers</h2>
   <p class="eyebrow">Looking for</p>
@@ -29,11 +43,19 @@
   <ul class="tag-list"><li class="tag">500</li><li class="tag">enterprise</li><li class="tag">fortune</li><li class="tag">intros</li><li class="tag">leaders</li><li class="tag">procurement</li><li class="tag">sales</li></ul>
 </article>
 </section>
-<section class="section">
-  <h2>Your schedule</h2>
-  <p>You're seated at <strong>Table 3</strong></p>
-  <ul class="plain-list"><li>Storytelling for Founders</li></ul>
-</section>
+</div>
+</div>
+<script>
+(function () {
+  document.querySelectorAll(".schedule-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!expanded));
+      document.getElementById(btn.getAttribute("aria-controls")).classList.toggle("is-open", !expanded);
+    });
+  });
+})();
+</script>
 </main>
 </body>
 </html>
