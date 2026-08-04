@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Demo Founder Six · UpLevel</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/branding/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/branding/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../../assets/branding/favicon-48.png">
+  <link rel="apple-touch-icon" href="../../assets/branding/apple-touch-icon.png">
+</head>
+<body>
+<div class="demo-banner">⚠ DEMO DATA — internal preview only, not real attendees</div>
+<main>
+<a class="back-link" href="../../lookbook/">← Back to lookbook</a>
+<p class="eyebrow">UpLevel Attendee</p>
+<h1>Demo Founder Six</h1>
+<ul class="tag-list"><li class="tag tag--primary">Founder</li><li class="tag">Active First-Time Founder</li><li class="tag">Parent / Caregiver</li><li class="tag tag--industry">Agtech</li><li class="tag tag--industry">Consumer</li></ul>
+<div class="page-layout">
+<aside class="schedule-area">
+<section class="section schedule-panel">
+  <h2><button type="button" class="schedule-toggle" aria-expanded="false" aria-controls="schedule-content">
+    Your schedule
+    <span class="toggle-icon" aria-hidden="true">▸</span>
+  </button></h2>
+  <div class="schedule-content" id="schedule-content">
+  <p>You're seated at <strong>Table 2</strong></p>
+  <ul class="plain-list"><li>Storytelling for Founders</li><li>Scaling Climate Tech Ventures</li></ul>
+  </div>
+</section>
+</aside>
+<div class="main-area">
+<section class="section">
+  <h2>Asks &amp; Offers</h2>
+  <p class="eyebrow">Looking for</p>
+  <ul class="plain-list"><li>Want customer intros to enterprise grocery and retail buyers for a foodtech pilot</li><li>Looking for advice on cold chain logistics for a perishable product</li></ul>
+  <p class="eyebrow">Can offer</p>
+  <ul class="plain-list"><li>Happy to share what worked for our early retail pilot and buyer intro process</li><li>Can offer intros within the agtech founder community</li></ul>
+</section>
+<section class="section">
+  <h2>Your matches</h2>
+<article class="match-card">
+  <h3><a href="../../profile/demo-advisor-one/">Demo Advisor One</a></h3>
+  <p class="match-reason">Their offer: &ldquo;Can offer intros to enterprise sales leaders and help navigate Fortune 500 procurement&rdquo; matches your ask: &ldquo;Want customer intros to enterprise grocery and retail buyers for a foodtech pilot&rdquo;</p>
+  <ul class="tag-list"><li class="tag">enterprise</li><li class="tag">intros</li></ul>
+</article>
+</section>
+</div>
+</div>
+<script>
+(function () {
+  document.querySelectorAll(".schedule-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!expanded));
+      document.getElementById(btn.getAttribute("aria-controls")).classList.toggle("is-open", !expanded);
+    });
+  });
+})();
+</script>
+</main>
+</body>
+</html>

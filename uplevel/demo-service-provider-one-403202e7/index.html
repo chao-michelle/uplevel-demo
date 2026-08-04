@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Demo Service Provider One · UpLevel</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/branding/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/branding/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../../assets/branding/favicon-48.png">
+  <link rel="apple-touch-icon" href="../../assets/branding/apple-touch-icon.png">
+</head>
+<body>
+<div class="demo-banner">⚠ DEMO DATA — internal preview only, not real attendees</div>
+<main>
+<a class="back-link" href="../../lookbook/">← Back to lookbook</a>
+<p class="eyebrow">UpLevel Attendee</p>
+<h1>Demo Service Provider One</h1>
+<ul class="tag-list"><li class="tag tag--primary">Service Provider</li><li class="tag">Consultant (e.g., strategy, ops, marketing)</li><li class="tag tag--industry">Fintech</li><li class="tag tag--industry">Enterprise SaaS</li></ul>
+<div class="page-layout">
+<aside class="schedule-area">
+<section class="section schedule-panel">
+  <h2><button type="button" class="schedule-toggle" aria-expanded="false" aria-controls="schedule-content">
+    Your schedule
+    <span class="toggle-icon" aria-hidden="true">▸</span>
+  </button></h2>
+  <div class="schedule-content" id="schedule-content">
+  <p>You're seated at <strong>Table 3</strong></p>
+  <ul class="plain-list"><li>Fundraising in a Down Market</li></ul>
+  </div>
+</section>
+</aside>
+<div class="main-area">
+<section class="section">
+  <h2>Asks &amp; Offers</h2>
+  <p class="eyebrow">Looking for</p>
+  <ul class="plain-list"><li>Looking for warm intros to early-stage founders who need fractional finance support</li><li>Want to connect with other fractional executives serving startups</li></ul>
+  <p class="eyebrow">Can offer</p>
+  <ul class="plain-list"><li>Offer fractional CFO services and financial modeling support for early-stage startups</li><li>Happy to do a free financial model review for early-stage founders</li></ul>
+</section>
+<section class="section">
+  <h2>Your matches</h2>
+<article class="match-card">
+  <h3><a href="../../profile/demo-advisor-two/">Demo Advisor Two</a></h3>
+  <p class="match-reason">Their offer: &ldquo;Happy to review clinical trial design for early-stage biotech founders&rdquo; matches your ask: &ldquo;Looking for warm intros to early-stage founders who need fractional finance support&rdquo;</p>
+  <ul class="tag-list"><li class="tag">early</li><li class="tag">founders</li><li class="tag">stage</li></ul>
+</article>
+<article class="match-card">
+  <h3><a href="../../profile/demo-investor-two/">Demo Investor Two</a></h3>
+  <p class="match-reason">Their offer: &ldquo;Happy to make warm intros to portfolio company hiring networks&rdquo; matches your ask: &ldquo;Looking for warm intros to early-stage founders who need fractional finance support&rdquo;</p>
+  <ul class="tag-list"><li class="tag">intros</li><li class="tag">warm</li></ul>
+</article>
+</section>
+</div>
+</div>
+<script>
+(function () {
+  document.querySelectorAll(".schedule-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!expanded));
+      document.getElementById(btn.getAttribute("aria-controls")).classList.toggle("is-open", !expanded);
+    });
+  });
+})();
+</script>
+</main>
+</body>
+</html>
